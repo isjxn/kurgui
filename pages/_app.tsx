@@ -1,6 +1,33 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { createTheme, NextUIProvider } from "@nextui-org/react"
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { AppProps } from 'next/app';
+import { KurNavbar } from '../components/KurNavbar';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const lightTheme = createTheme({
+  type: 'light',
+  theme: {}
+});
+
+const darkTheme = createTheme({
+  type: 'dark',
+  theme: {}
+});
+
+export default function KurApp({ Component, pageProps }: AppProps) {
+  return (
+    <NextThemesProvider
+    defaultTheme="system"
+    attribute="class"
+    value={{
+      light: lightTheme.className,
+      dark: darkTheme.className
+    }}
+    >
+      <NextUIProvider>
+        <KurNavbar />
+        <Component {...pageProps} />
+      </NextUIProvider>
+    </NextThemesProvider>
+  )
 }
