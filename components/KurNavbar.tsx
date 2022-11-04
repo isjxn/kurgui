@@ -13,9 +13,13 @@ export const KurNavbar = () => (
             lineHeight: '24px'
         }}>
           <Navbar.Link isActive href="/">Home</Navbar.Link>
-          <Navbar.Link href="#">Customers</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
+          <Navbar.Link href="#">Beschränkungen</Navbar.Link>
+          <Navbar.Link href="#">Bestellungen</Navbar.Link>
+          <Navbar.Link href="#">Ernährungskategorien</Navbar.Link>
+          <Navbar.Link href="#">Kunden</Navbar.Link>
+          <Navbar.Link href="#">Lieferanten</Navbar.Link>
+          <Navbar.Link href="#">Rezepte</Navbar.Link>
+          <Navbar.Link href="#">Zutaten</Navbar.Link>
         </Navbar.Content>
       </Navbar>
 )
